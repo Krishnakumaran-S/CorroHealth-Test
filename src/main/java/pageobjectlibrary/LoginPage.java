@@ -1,5 +1,6 @@
 package pageobjectlibrary;
 
+import cucumber.api.java.en.And;
 import locatorobjectrepo.LoginPageLocators;
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.Step;
@@ -26,4 +27,10 @@ public class LoginPage extends PageObject {
         $(LoginPageLocators.LOGIN_PAGE_BUTTON).click();
     }
 
-}
+    @Step("^Verify the error message for invalid cred$")
+    public void verify() {
+        String str = $(LoginPageLocators.ERROR_MSG).getText();
+        if(str.equals("Invalid"));
+    }
+
+    }

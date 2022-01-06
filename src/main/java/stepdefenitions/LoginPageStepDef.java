@@ -30,4 +30,10 @@ public class LoginPageStepDef {
     public void clickLoginButton() {
         loginpage.Enter_Button();
     }
+
+    @And("^Verify the error message for invalid cred$")
+    public void verify(){
+
+    }
+
 }

@@ -7,5 +7,4 @@ Feature: Validation for Login Page
     Then Enter username "Admin"
     Then Enter Password "admin123"
     And Click Login Button
-    And Enter Name
-    Then Enter Age "28"
+    And Verify the error message for invalid cred
