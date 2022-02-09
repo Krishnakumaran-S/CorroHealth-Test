@@ -1,6 +1,9 @@
 package pageobjectlibrary;
 
+import java.io.IOException;
+
 import cucumber.api.java.en.And;
+import excelpackage.ReadXcelFile;
 import locatorobjectrepo.LoginPageLocators;
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.Step;
@@ -13,8 +16,9 @@ public class LoginPage extends PageObject {
     }
 
     @Step("Enter Username")
-    public void Enter_Username(String username) {
-        $(LoginPageLocators.LOGIN_PAGE_USERNAME).sendKeys(username);
+    public void Enter_Username(String username) throws IOException {
+    	String user_name = ReadXcelFile.returnExcelvalue();
+        $(LoginPageLocators.LOGIN_PAGE_USERNAME).sendKeys(user_name);
     }
 
     @Step("Enter Password")

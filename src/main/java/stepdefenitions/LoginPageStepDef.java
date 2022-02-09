@@ -16,14 +16,14 @@ public class LoginPageStepDef {
       loginpage.open_and_navigate();
     }
 
-    @Then("^Enter username \"([^\"]*)\"$")
-    public void enterUsername(String arg0) throws Throwable {
-        loginpage.Enter_Username(arg0);
+    @Then("^Enter username$")
+    public void enterUsername() throws Throwable {
+        
     }
 
-    @Then("^Enter Password \"([^\"]*)\"$")
-    public void enterPassword(String arg0) throws Throwable {
-        loginpage.Enter_Password(arg0);
+    @Then("^Enter Password$")
+    public void enterPassword() throws Throwable {
+        
     }
 
     @And("^Click Login Button$")
